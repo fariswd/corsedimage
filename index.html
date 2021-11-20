@@ -6,26 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
-  <script>
-    (async function () {
-      try {
-        const baseUrl = 'http://localhost:3000/?q='
-        const CORSedImg = 'https://instagram.fcgk30-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/242214348_605226433810955_667164358959311645_n.jpg?_nc_ht=instagram.fcgk30-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=oq8YWqSAJVUAX-vzqsI&tn=EpjdBRtvAEyXOWX1&edm=AP_V10EBAAAA&ccb=7-4&oh=0b43a256b8d106de533a61dec570d68f&oe=6197E75B&_nc_sid=4f375e'
-
-        const base64 = await axios.get(`${baseUrl}${CORSedImg}`)
-        let img = document.createElement("img");
-        img.src = base64.data
-        img.height = 500
-        document.body.appendChild(img);
-      } catch (error) {
-        console.log('error :(')
-      }
-    })()
-  </script>
+  <img
+    src="http://localhost:3000/?q=https://instagram.fcgk30-1.fna.fbcdn.net/v/t51.2885-15/e35/242214348_605226433810955_667164358959311645_n.jpg?_nc_ht=instagram.fcgk30-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=QWF_Ai3SIncAX8QgW6c&tn=KwsTwLpamfZXP39X&edm=AJ9x6zYBAAAA&ccb=7-4&oh=eac49c663aa469154959d6367a08c7f9&oe=61A0BE0A&_nc_sid=cff2a4&ig_cache_key=MjY2NTQ3NzI3MjEzODY1NzAzOQ%3D%3D.2-ccb7-4"
+    height="500" />
 </body>
 
 </html>

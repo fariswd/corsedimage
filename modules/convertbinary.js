@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const convertBase64 = async (url) => {
+const convertBinary = async (url) => {
   try {
     const response = await axios({
       method: "GET",
@@ -25,8 +25,8 @@ const convertBase64 = async (url) => {
         TE: "trailers",
       },
     });
-    const buffer = Buffer.from(response.data, "binary").toString("base64");
-    return `data:image/png;base64, ${buffer}`;
+    const buffer = Buffer.from(response.data, "binary");
+    return buffer;
   } catch (error) {
     return Promise.reject({
       error: true,
@@ -36,4 +36,4 @@ const convertBase64 = async (url) => {
   }
 };
 
-module.exports = convertBase64;
+module.exports = convertBinary;

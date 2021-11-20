@@ -1,6 +1,6 @@
 # CORSed Instagram Image
 
-Just bypassing with base64
+Just bypassing with binary
 
 ## ss
 
@@ -10,7 +10,7 @@ Just bypassing with base64
 
 ```
 npm install && npm start
-change CORSed img value on index.html
+change src value on index.html
 open index.html
 ```
 
